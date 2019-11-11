@@ -7,7 +7,7 @@ resource "aws_elb" "lb" {
   
   security_groups    = [var.sg-id]
   subnets            = var.subnet-id
-  internal           = true
+  internal           = false
 
   listener {
     instance_port     = 15672

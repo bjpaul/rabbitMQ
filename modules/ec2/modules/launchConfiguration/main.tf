@@ -5,7 +5,7 @@ resource "aws_launch_configuration" "lc" {
 
   iam_instance_profile = var.iam_inst_prof
   user_data = filebase64("${path.module}/cloud-config-lighter")
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   security_groups = [var.sg-id]
   
   lifecycle {
